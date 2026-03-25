@@ -1,7 +1,10 @@
-import { data } from '../data'
-import ScrambleEmail from './ScrambleEmail'
+import { useScrambleEmail } from './ScrambleEmail'
+
+const DOMAIN = '@vwakesahu.com'
 
 export default function Contact() {
+  const { prefix, mailto } = useScrambleEmail()
+
   return (
     <section id="s06">
       <div className="wrap">
@@ -12,8 +15,9 @@ export default function Contact() {
           <br />
           I'd like to hear about it.
         </p>
-        <a href={`mailto:${data.contact.email}`} className="ct-email rv">
-          <ScrambleEmail />
+        <a href={mailto} className="ct-email rv">
+          <span className="scramble-prefix">{prefix}</span>
+          {DOMAIN}
         </a>
       </div>
     </section>

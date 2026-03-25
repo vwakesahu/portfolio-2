@@ -10,9 +10,12 @@ export default function Work() {
         {data.experience.map((job) => (
           <div key={job.company} className="job rv">
             <div className="job-head">
-              <a href={job.url} className="job-co" target="_blank" rel="noopener noreferrer">
-                {job.company}
-              </a>
+              <div className="job-left">
+                <img src={job.logo} alt={job.company} className="job-logo" />
+                <a href={job.url} className="job-co" target="_blank" rel="noopener noreferrer">
+                  {job.company}
+                </a>
+              </div>
               <span className="job-meta">
                 {job.role} · {job.period}
               </span>

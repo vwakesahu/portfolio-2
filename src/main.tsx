@@ -26,7 +26,7 @@ window.hire = () => window.open('mailto:type-anything@vwakesahu.com')
 
 window.stack = () =>
   console.log(
-    '%c Stack\n\n  Framework    React + Vite\n  Fonts        Fraunces · Instrument Serif · DM Mono\n  Hosting      Raspberry Pi 4 · 4GB RAM\n  Server       nginx · Cloudflare DNS\n\n  No analytics. No trackers. No cookies.\n  A Pi in Bengaluru.\n',
+    '%c Stack\n\n  Framework    React + Vite\n  Fonts        Fraunces · Instrument Serif · DM Mono\n  Hosting      Raspberry Pi 5 · 8GB RAM\n  Server       Cloudflare Tunnel · DNS\n\n  No analytics. No trackers. No cookies.\n  A Pi in Bengaluru.\n',
     G
   )
 

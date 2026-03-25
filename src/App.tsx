@@ -14,12 +14,12 @@ import { useScrollReveal } from './hooks/useScrollReveal'
 import { useCmdK } from './hooks/useCmdK'
 import { useKonami } from './hooks/useKonami'
 import Lab from './pages/Lab'
+import NotFound from './pages/NotFound'
 
 function Portfolio() {
   const { open, setOpen } = useCmdK()
   const [konamiMsg, setKonamiMsg] = useState(false)
 
-  useCursor()
   useScrollReveal()
 
   const triggerKonami = useCallback(() => {
@@ -36,7 +36,6 @@ function Portfolio() {
 
   return (
     <>
-      <div id="c-dot" />
       <div id="k-msg" className={konamiMsg ? 'on' : ''}>
         dark mode isn't my thing either
       </div>
@@ -57,11 +56,15 @@ function Portfolio() {
 }
 
 export default function App() {
+  useCursor()
+
   return (
     <BrowserRouter>
+      <div id="c-dot" />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/lab" element={<Lab />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

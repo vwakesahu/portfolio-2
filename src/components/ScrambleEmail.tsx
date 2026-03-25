@@ -19,8 +19,9 @@ function randomChar() {
   return CHARS[Math.floor(Math.random() * CHARS.length)]
 }
 
-export default function ScrambleEmail() {
+export function useScrambleEmail() {
   const [prefix, setPrefix] = useState(WORDS[0])
+  const [settled, setSettled] = useState(WORDS[0])
   const wordIndex = useRef(0)
   const intervalRef = useRef<ReturnType<typeof setInterval>>()
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
@@ -47,6 +48,7 @@ export default function ScrambleEmail() {
       if (iteration >= maxLen) {
         clearInterval(intervalRef.current)
         setPrefix(target)
+        setSettled(target)
       }
       iteration += 0.4
     }, 32)
@@ -65,6 +67,14 @@ export default function ScrambleEmail() {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
   }, [scrambleTo])
+
+  const mailto = `mailto:${settled}${DOMAIN}`
+
+  return { prefix, mailto }
+}
+
+export default function ScrambleEmail() {
+  const { prefix } = useScrambleEmail()
 
   return (
     <>

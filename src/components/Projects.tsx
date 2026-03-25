@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section id="s04">
       <div className="wrap">
-        <div className="mn">§04 / 3 shipped</div>
+        <div className="mn">§04 / 2 shipped</div>
         <div className="s-rule" />
         <span className="s-label rv">Projects</span>
         <div className="rv">

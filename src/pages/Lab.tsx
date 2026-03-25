@@ -12,7 +12,7 @@ export default function Lab() {
           <br />
           But you found it.
         </p>
-        <p className="lab-sig">— vwakesahu</p>
+        <p className="lab-sig">vwakesahu</p>
       </div>
     </div>
   )

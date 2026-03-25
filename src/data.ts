@@ -6,7 +6,7 @@ export const data = {
   location: 'Bengaluru',
 
   currently:
-    'Currently building integrations and frontend at Inco, the confidentiality layer of Web3. Frontend, backend, whatever ships the thing.',
+    'I develop decentralized apps for Inco, the confidentiality layer of Web3. I handle all frontend coding and integrate the apps with smart contracts and backend systems.',
 
   contact: {
     email: 'type-anything@vwakesahu.com',
@@ -19,18 +19,20 @@ export const data = {
   experience: [
     {
       company: 'Inco',
+      logo: '/logo/inco.svg',
       role: 'Integrations & Frontend',
       period: 'Current',
       description:
-        'The confidentiality layer of Web3. I build integrations and frontend that let developers add programmable privacy to any EVM chain without touching cryptography.',
+        'I develop decentralized apps and handle all frontend coding, integrating apps with smart contracts and backend systems. But really, whatever needs to ship.',
       url: 'https://inco.org',
     },
     {
       company: 'Qoneqt',
+      logo: '/logo/qoneqt.svg',
       role: 'Frontend Engineer',
       period: 'Previous',
       description:
-        'A verified social platform, no algorithms, no bots, no fake profiles. Built the frontend for a product trying to make social media honest again.',
+        'Developed the frontend in Next.js for their social media platform. Worked with the design team using Next.js and Tailwind CSS to build and enhance the user interface.',
       url: 'https://qoneqt.com',
     },
   ],
@@ -48,14 +50,14 @@ export const data = {
       name: 'Assura Network',
       tagline: 'Privacy-first payments infrastructure.',
       description:
-        'Stealth address receipts, Zcash shielding, cross-chain swaps, zero-knowledge proofs, all wired together. Full-stack, frontend and backend.',
+        'Stealth address receipts, Zcash shielding, cross-chain swaps, and zero-knowledge proofs,all wired together. Full-stack, frontend and backend.',
       url: 'https://www.assura.network',
       urlLabel: 'assura.network',
     },
   ],
 
   capabilities:
-    "I work across the full stack. React frontends, Node backends, Cloudflare Workers, and nginx configs. I'm comfortable with Solidity and EVM integrations, and most of my recent work lives at the intersection of privacy and web3. I've shipped products end-to-end: from the smart contract to the reverse proxy to the UI. I also run my own servers.",
+    "Frontend, backend, DevOps, smart contracts, infra. I've done all of it. Somehow every interview still ends with a frontend offer. I take it, then quietly ship the rest too. Entire products, end-to-end. The contract, the API, the deployment pipeline, the UI nobody asked me to redesign.",
 
   cmdkItems: [
     { label: 'Send email', url: 'mailto:type-anything@vwakesahu.com' },
