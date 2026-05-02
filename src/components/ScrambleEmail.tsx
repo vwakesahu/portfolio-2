@@ -27,32 +27,26 @@ export function useScrambleEmail() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
 
   const scrambleTo = useCallback((target: string) => {
-    const maxLen = Math.max(prefix.length, target.length)
     let iteration = 0
 
     if (intervalRef.current) clearInterval(intervalRef.current)
 
     intervalRef.current = setInterval(() => {
-      setPrefix(
-        target
-          .padEnd(maxLen, ' ')
-          .split('')
-          .map((char, i) => {
-            if (i < iteration) return target[i] || ''
-            return randomChar()
-          })
-          .join('')
-          .trimEnd()
-      )
-
-      if (iteration >= maxLen) {
-        clearInterval(intervalRef.current)
+      if (iteration >= target.length) {
+        if (intervalRef.current) clearInterval(intervalRef.current)
         setPrefix(target)
         setSettled(target)
+        return
       }
+      setPrefix(
+        target
+          .split('')
+          .map((char, i) => (i < iteration ? char : randomChar()))
+          .join('')
+      )
       iteration += 0.4
     }, 32)
-  }, [prefix.length])
+  }, [])
 
   useEffect(() => {
     function cycle() {

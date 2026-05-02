@@ -2,11 +2,11 @@ export const data = {
   name: 'Vivek Sahu',
   handle: '@vwakesahu',
   headline: ['The engineer who', "doesn't hand off."],
-  role: 'Engineer',
+  role: 'Frontend Engineer',
   location: 'Bengaluru',
 
   currently:
-    'I develop decentralized apps for Inco, the confidentiality layer of Web3. I handle all frontend coding and integrate the apps with smart contracts and backend systems.',
+    "I'm the frontend engineer at Inco, the confidentiality layer of Web3. I build the product in React, TypeScript, and Next.js, work with the design team on the flows, and handle the smart contract and backend integration myself.",
 
   contact: {
     email: 'type-anything@vwakesahu.com',
@@ -20,10 +20,10 @@ export const data = {
     {
       company: 'Inco',
       logo: '/logo/inco.svg',
-      role: 'Integrations & Frontend',
+      role: 'Frontend & Integrations',
       period: 'Current',
       description:
-        'I develop decentralized apps and handle all frontend coding, integrating apps with smart contracts and backend systems. But really, whatever needs to ship.',
+        'I run the frontend at Inco. React, TypeScript, Next.js. I work with the design team on the product flows, ship features end-to-end, and integrate them with the smart contracts and backend.',
       url: 'https://inco.org',
     },
     {
@@ -32,7 +32,7 @@ export const data = {
       role: 'Frontend Engineer',
       period: 'Previous',
       description:
-        'Developed the frontend in Next.js for their social media platform. Worked with the design team using Next.js and Tailwind CSS to build and enhance the user interface.',
+        'Built the frontend for their social platform in Next.js, TypeScript, and Tailwind. Worked closely with the design team and shipped the user-facing flows.',
       url: 'https://qoneqt.com',
     },
   ],
@@ -50,14 +50,14 @@ export const data = {
       name: 'Assura Network',
       tagline: 'Privacy-first payments infrastructure.',
       description:
-        'Stealth address receipts, Zcash shielding, cross-chain swaps, and zero-knowledge proofs,all wired together. Full-stack, frontend and backend.',
+        'Stealth address receipts, Zcash shielding, cross-chain swaps, and zero-knowledge proofs, all wired together. Full-stack, frontend and backend.',
       url: 'https://www.assura.network',
       urlLabel: 'assura.network',
     },
   ],
 
   capabilities:
-    "Frontend, backend, DevOps, smart contracts, infra. I've done all of it. Somehow every interview still ends with a frontend offer. I take it, then quietly ship the rest too. Entire products, end-to-end. The contract, the API, the deployment pipeline, the UI nobody asked me to redesign.",
+    "Frontend is what I do best. React, TypeScript, Next.js, plus the design work to get it looking right. I've also done backend, DevOps, smart contracts, and infra. Every interview ends with a frontend offer. I take it, then ship the rest too. Entire products, end-to-end. The contract, the API, the deploy pipeline, the UI nobody asked me to redesign.",
 
   cmdkItems: [
     { label: 'Send email', url: 'mailto:type-anything@vwakesahu.com' },

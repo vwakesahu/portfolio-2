@@ -35,12 +35,11 @@ export const DistortedGlass = ({ className }: { className?: string }) => {
       </div>
       <style>{`
         .glass-effect {
-          background: rgba(0, 0, 0, 0.2);
           background: repeating-radial-gradient(
             circle at 50% 50%,
-            rgb(255 255 255 / 0),
-            rgba(255, 255, 255, 0.2) 10px,
-            rgb(255 255 255) 31px
+            rgba(244, 242, 238, 0),
+            rgba(244, 242, 238, 0.2) 10px,
+            rgba(244, 242, 238, 1) 31px
           );
           filter: url(#fractal-noise-glass);
           background-size: 6px 6px;

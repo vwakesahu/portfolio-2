@@ -1,8 +1,19 @@
 import { useCallback, useRef, useState } from 'react'
 
 const NEXT: Record<string, string> = { parchment: 'noir', noir: 'parchment' }
-const NEXT_PAPER: Record<string, string> = { parchment: '#0C0A08', noir: '#F2EDE3' }
+const PAPER: Record<string, string> = { parchment: '#F4F2EE', noir: '#0C0A08' }
+const NEXT_PAPER: Record<string, string> = { parchment: '#0C0A08', noir: '#F4F2EE' }
 const NEXT_NAME: Record<string, string> = { parchment: '→ noir', noir: '→ parchment' }
+
+const setStatusBarColor = (color: string) => {
+  // iOS Safari often ignores updates to an existing theme-color tag.
+  // Removing all of them and inserting a fresh one forces a re-read.
+  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.remove())
+  const tag = document.createElement('meta')
+  tag.setAttribute('name', 'theme-color')
+  tag.setAttribute('content', color)
+  document.head.appendChild(tag)
+}
 
 export function useTheme() {
   const [theme, setTheme] = useState('parchment')
@@ -39,6 +50,7 @@ export function useTheme() {
 
     setTimeout(() => {
       document.documentElement.setAttribute('data-theme', next === 'parchment' ? '' : next)
+      setStatusBarColor(PAPER[next])
       setTheme(next)
     }, 280)
 

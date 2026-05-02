@@ -9,7 +9,7 @@ export default function Header({ onCmdK }: HeaderProps) {
   const { nextPaper, nextName, cycleTheme, btnRef } = useTheme()
 
   return (
-    <div className="sticky top-0 z-[200]">
+    <div className="sticky top-0 z-[200]" style={{ backgroundColor: 'var(--p)' }}>
       {/* Glass behind — covers full area, content scrolls under it */}
       <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 0 }}>
         <DistortedGlass className="h-full w-full" />

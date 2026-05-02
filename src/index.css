@@ -6,22 +6,22 @@
    TWO THEMES
 =========================== */
 :root {
-  --p:  #F2EDE3;
-  --i:  #1A1714;
-  --im: #6A6058;
-  --if: #B5ADA3;
-  --r:  rgba(26,23,20,.09);
-  --rs: rgba(26,23,20,.20);
-  --np: #0C0A08;
+  --p:  #F4F2EE;
+  --i:  #0F0E0C;
+  --im: #524D45;
+  --if: #8C857A;
+  --r:  rgba(15,14,12,.10);
+  --rs: rgba(15,14,12,.22);
+  --np: #0F0E0C;
 }
 [data-theme="noir"] {
   --p:  #0C0A08;
   --i:  #EDE8DF;
-  --im: #6B6358;
-  --if: #2C2820;
-  --r:  rgba(237,232,223,.08);
-  --rs: rgba(237,232,223,.16);
-  --np: #F2EDE3;
+  --im: #B0A698;
+  --if: #7A7268;
+  --r:  rgba(237,232,223,.10);
+  --rs: rgba(237,232,223,.20);
+  --np: #EFEAE0;
 }
 
 /* ===========================
@@ -44,14 +44,7 @@ body {
   body { cursor: none; }
   a, button, .hd-cmdk, #hero-name { cursor: none; }
 }
-body::after {
-  content: '';
-  position: fixed; inset: 0;
-  pointer-events: none; z-index: 9999; opacity: .032;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 220px 220px;
-  transition: none !important;
-}
+body::after { display: none; }
 ::selection { background: rgba(128,128,128,.12); color: var(--i); }
 
 /* ===========================
@@ -202,28 +195,34 @@ section { padding: 72px 0; }
 .h-line.lift span { transform: translateY(0); }
 .h-line:nth-child(2) span { transition-delay: .12s; }
 .hero-byline {
-  display: flex; align-items: baseline; gap: 12px;
-  font-style: italic; color: var(--im); font-size: 16px;
+  display: flex; align-items: baseline; gap: 10px;
+  color: var(--im); font-size: 14px;
 }
 #hero-name {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic; font-size: 16px;
+  color: var(--i);
   transition: color .2s;
 }
-#hero-name:hover { color: var(--i); }
+#hero-name:hover { color: var(--im); }
 .hero-pill {
   font-family: 'DM Mono', monospace;
-  font-size: 10px; font-weight: 300;
-  font-style: normal; color: var(--if);
-  letter-spacing: .1em; text-transform: uppercase;
+  font-size: 11px; font-weight: 400;
+  color: var(--im);
+  letter-spacing: 0;
 }
-.hero-dot { color: var(--if); font-style: normal; margin: 0 3px; }
+.hero-dot {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--if);
+  margin: 0 2px;
+}
 
 /* ===========================
    §02  CURRENTLY
 =========================== */
 .cur-text {
-  font-style: italic; color: var(--im);
+  color: var(--im);
   font-size: 17px; line-height: 1.8;
   max-width: 480px;
 }
@@ -268,7 +267,7 @@ section { padding: 72px 0; }
   white-space: nowrap; flex-shrink: 0;
 }
 .job-desc {
-  font-style: italic; color: var(--im);
+  color: var(--im);
   font-size: 15px; line-height: 1.7;
 }
 
@@ -300,7 +299,7 @@ section { padding: 72px 0; }
   letter-spacing: -.01em; margin-bottom: 3px;
 }
 .proj-tag {
-  font-style: italic; color: var(--im);
+  color: var(--im);
   font-size: 14px; margin-bottom: 8px;
 }
 .proj-desc {
@@ -325,7 +324,7 @@ section { padding: 72px 0; }
    §05  CAPABILITIES
 =========================== */
 .cap-text {
-  font-style: italic; color: var(--im);
+  color: var(--im);
   font-size: 17px; line-height: 1.88;
   max-width: 500px;
 }
@@ -494,7 +493,7 @@ section { padding: 72px 0; }
 }
 .lab-inner { max-width: 400px; }
 .lab-inner p {
-  font-style: italic; font-size: 17px;
+  font-size: 17px;
   line-height: 1.8; color: var(--im);
 }
 .lab-inner p + p { margin-top: 24px; }
